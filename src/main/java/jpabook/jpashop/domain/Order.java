@@ -41,8 +41,7 @@ public class Order {
     //==연관관계 메서드==//
     public void setMember(Member member){
         this.member = member;
-        Order order = new Order();
-        order.setMember(member);
+        member.getOrderList().add(this);
     }
     public void addOrderItem(OrderItem orderItem){
         orderItems.add(orderItem);
